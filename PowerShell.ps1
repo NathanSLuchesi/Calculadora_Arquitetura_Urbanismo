@@ -45,13 +45,14 @@ while ($true) {
             Write-Host "                                                "
         $i = Read-Host " ADICIONE O VALOR DA INCLINAÇÃO (I)"
         $h = Read-Host " ADICIONE O VALOR DA ALTURA DO TELHADO (H)"
-        $v = Read-Host " ADICIONE O VALOR DO VÃO DE ÁGUA (V)`n ============================================== " 
+        $v = Read-Host " ADICIONE O VALOR DO VÃO DE ÁGUA (V)" 
+            Write-Host " ============================================== " 
             if ($i -eq 'x' -or $i -eq 'X' ){
                 $i = [double]$h / [double]$v
             }elseif ($v -eq 'x' -or $v -eq 'X'){
                 $v = [double]$i * [double]$h
             }elseif ($h -eq 'x' -or $h -eq 'X'){
-                $h = [double]$I * [double]$v
+                $h = [double]$i * [double]$v
             }else{
                 for ($cont = 3; $cont -ge 0; $cont--){
                     Clear-Host
@@ -65,9 +66,12 @@ while ($true) {
             Write-Host " =============================================== "
             Write-Host "  RESULTADO DO CALCULO DA INCLINAÇÃO DO TELHADO  "
             Write-Host "                                                 "
-            Write-Host "  I = $i              [1] CALCULAR OUTRO VALOR   "
-            Write-Host "  H = $h              [2] MENU PRINCIPAL         "
-            Write-Host "  V = $v              [0] SAIR DA CALCULADORA    "
+            Write-Host "  I = $i             "
+            Write-Host "  H = $h                    "
+            Write-Host "  V = $v                  "
+            Write-Host "                                                 "
+            Write-Host "  [1] CALCULAR OUTRO VALOR | [2] MENU PRINCIPAL  "
+            Write-Host "             [0] SAIR DA CALCULADORA             "
             Write-Host "                                                 "
             Write-Host " =============================================== "
 
@@ -96,7 +100,8 @@ while ($true) {
             Write-Host "                                                "
         $n = Read-Host " ADICIONE O NÚMERO DE UNIDADES DE PASSAGEM (N)"
         $p = Read-Host " ADICIONE A QUANTIDADE DE POPULAÇÃO (P)"
-        $c = Read-Host " ADICIONE A CAPACIDADE A UNIDADE DE PESSAGEM (c) `n ============================================== "
+        $c = Read-Host " ADICIONE A CAPACIDADE A UNIDADE DE PESSAGEM (c)"
+            Write-Host " ============================================== "
             if ($n -eq 'x' -or $n -eq 'X'){
                 $n = [double]$p / [double]$c
             }
@@ -118,9 +123,12 @@ while ($true) {
             Write-Host " ====================================================== "
             Write-Host "  RESULTADO DO DIMENSIONAMENTO DE SAÍDAS DE EMERGÊNCIA  "
             Write-Host "                                                        "
-            Write-Host "        N = $n              [1] CALCULAR OUTRO VALOR    "
-            Write-Host "        P = $p              [2] MENU PRINCIPAL          "
-            Write-Host "        c = $c              [0] SAIR DA CALCULADORA     "
+            Write-Host "        N = $n                   "
+            Write-Host "        P = $p               "
+            Write-Host "        c = $c               "
+            Write-Host "                                                        "
+            Write-Host "     [1] CALCULAR OUTRO VALOR | [2] MENU PRINCIPAL      "
+            Write-Host "                [0] SAIR DA CALCULADORA                 "
             Write-Host "                                                        "
             Write-Host " ====================================================== "
 
@@ -140,7 +148,32 @@ while ($true) {
         }
         '3'{
             while($true){
-                
+            Clear-Host
+            Write-Host " ============================================== "
+            Write-Host " TRANSFORMAÇÃO DO NORTE MAGNÉTICO EM GEOGRÁFICO "
+            Write-Host "                                                "
+            Write-Host "                                                "
+            Write-Host "                  AZV = AZM + D                 "
+            Write-Host "                                                "
+            Write-Host "                                                "
+        $azv = Read-Host " ADICIONE O VALOR DO AZIMUTE VERDADEIRO (AZV)   "
+        $azm = Read-Host " ADICIONE O VALOR DO AZIMUTE MAGNÉTICO (AZM)    "
+        $d = Read-Host " ADICIONE O VALOR DA DECLINAÇÃO MAGNÉTICA (D)   "
+            Write-Host " ============================================== "    
+            }
+            if ($azv -eq 'x' -or $avz -eq 'X') {
+                $azv = [double]$azm + [double]$d
+            }
+            elseif ($azm -eq 'x' -or $azm -eq 'X') {
+                $azm = [double]$d - [double]$azv
+            }
+            elseif ($azv -eq 'x' -or $azv -eq 'X') {
+                $azv = [double]$d - [double]$azm
+            }
+            else {
+                for ($cont = 3; $cont -ge 0; $cont--) {
+                    
+                }
             }
         }
         '4'{
