@@ -172,8 +172,34 @@ while ($true) {
             }
             else {
                 for ($cont = 3; $cont -ge 0; $cont--) {
-                    
+                    Clear-Host
+                    Write-Host"VALOR INCORRETO, SAINDO DO SISTEMA EM: [$cont]"
+                    Start-Sleep -Seconds 1
                 }
+            Clear-Host
+            Write-Host " ============================================================= "
+            Write-Host "  RESULTADO DA TRANSFORMAÇÃO DO NORTE MAGNÉTICO EM GEOGRÁFICO  "
+            Write-Host "                                                               "
+            Write-Host "  AZV = $azv                                                   "
+            Write-Host "  AZM = $azm                                                   "
+            Write-Host "   D  = $d                                                     "
+            Write-Host "                                                               "
+            Write-Host "         [1] CALCULAR OUTRO VALOR | [2] MENU PRINCIPAL         "
+            Write-Host "                     [0]SAIR DA CALCULADORA                    "
+            Write-Host "                                                               "
+            Write-Host " ============================================================= "
+
+            $escolha = [System.console]::ReadKey($true).KeyChar
+
+            if ($escolha -eq '1') {
+                continue
+            }
+            elseif ($escolha -eq '2') {
+                break
+            }
+            elseif ($escolha -eq '3') {
+                exit
+            }
             }
         }
         '4'{
