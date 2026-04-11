@@ -56,7 +56,7 @@ while ($true) {
             }else{
                 for ($cont = 3; $cont -ge 0; $cont--){
                     Clear-Host
-                    Write-Host"VALOR INCORRETO, SAINDO DO SISTEMA EM: [$cont]"
+                    Write-Host "VALOR INCORRETO, SAINDO DO SISTEMA."
                     Start-Sleep -Seconds 1
                 }
                 exit
@@ -112,11 +112,9 @@ while ($true) {
                 $c = [double]$p * [double]$n
             }
             else {
-                for ($cont = 3; $cont -ge 0; $cont--){
                     Clear-Host
-                    Write-Host"VALOR INCORRETO, SAINDO DO SISTEMA EM: [$cont]"
+                    Write-Host "VALOR INCORRETO, SAINDO DO SISTEMA."
                     Start-Sleep -Seconds 1
-                }
                 exit                
         }
             Clear-Host
@@ -160,22 +158,22 @@ while ($true) {
         $azm = Read-Host " ADICIONE O VALOR DO AZIMUTE MAGNÉTICO (AZM)    "
         $d = Read-Host " ADICIONE O VALOR DA DECLINAÇÃO MAGNÉTICA (D)   "
             Write-Host " ============================================== "    
-            }
-            if ($azv -eq 'x' -or $avz -eq 'X') {
-                $azv = [double]$azm + [double]$d
-            }
+            
+            if ($azv -eq 'x' -or $azv -eq 'X') {
+    $azv = [double]$azm + [double]$d
+         }
             elseif ($azm -eq 'x' -or $azm -eq 'X') {
-                $azm = [double]$d - [double]$azv
-            }
-            elseif ($azv -eq 'x' -or $azv -eq 'X') {
-                $azv = [double]$d - [double]$azm
-            }
+        $azm = [double]$azv - [double]$d
+        }
+            elseif ($d -eq 'x' -or $d -eq 'X') {
+            $d = [double]$azv - [double]$azm
+        }
             else {
-                for ($cont = 3; $cont -ge 0; $cont--) {
                     Clear-Host
-                    Write-Host"VALOR INCORRETO, SAINDO DO SISTEMA EM: [$cont]"
+                    Write-Host "VALOR INCORRETO, SAINDO DO SISTEMA."
                     Start-Sleep -Seconds 1
-                }
+                    exit
+            }
             Clear-Host
             Write-Host " ============================================================= "
             Write-Host "  RESULTADO DA TRANSFORMAÇÃO DO NORTE MAGNÉTICO EM GEOGRÁFICO  "
@@ -197,7 +195,7 @@ while ($true) {
             elseif ($escolha -eq '2') {
                 break
             }
-            elseif ($escolha -eq '3') {
+            elseif ($escolha -eq '0') {
                 exit
             }
             }
