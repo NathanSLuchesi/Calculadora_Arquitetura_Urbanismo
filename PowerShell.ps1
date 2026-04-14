@@ -154,9 +154,9 @@ while ($true) {
             Write-Host "                  AZV = AZM + D                 "
             Write-Host "                                                "
             Write-Host "                                                "
-        $azv = Read-Host " ADICIONE O VALOR DO AZIMUTE VERDADEIRO (AZV)   "
-        $azm = Read-Host " ADICIONE O VALOR DO AZIMUTE MAGNÉTICO (AZM)    "
-        $d = Read-Host " ADICIONE O VALOR DA DECLINAÇÃO MAGNÉTICA (D)   "
+        $azv = Read-Host " ADICIONE O VALOR DO AZIMUTE VERDADEIRO (AZV)"
+        $azm = Read-Host " ADICIONE O VALOR DO AZIMUTE MAGNÉTICO (AZM)"
+        $d = Read-Host " ADICIONE O VALOR DA DECLINAÇÃO MAGNÉTICA (D)"
             Write-Host " ============================================== "    
             
             if ($azv -eq 'x' -or $azv -eq 'X') {
