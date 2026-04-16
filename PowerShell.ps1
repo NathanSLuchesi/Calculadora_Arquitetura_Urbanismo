@@ -25,6 +25,7 @@ function InterfacePrincipal { #Interface bem bonitinha
     Write-Host "|       CASO UMA MEDIDA NÃO POSSUA VALOR COLOQUE 'X' ou 'x'       |"
     Write-Host " ================================================================= "
     }
+    
 while ($true) {            
 
     InterfacePrincipal
