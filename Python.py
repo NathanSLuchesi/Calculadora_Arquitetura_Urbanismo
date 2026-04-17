@@ -29,15 +29,59 @@ def menu():
     print (" =============================================================== ")
     return option
 
+def calc_telhado(): # Em andamento
+    limpar()
+    print (" ======================================= ")
+    print ("    FÓRMULA DA INCLINAÇÃO DO TELHADO     ")
+    print ("                     H                   ")
+    print ("                I = ---                  ")
+    print ("                     V                   ")
+    i = float(input("ADICIONE O VALOR DA INCLINAÇÃO(I):"))
+    h = float(input("ADIOCIONE O VALOR DA ALTURA DO TELHADO(H):"))
+    v = float(input("ADICIONE O VALOR DO VÃO DA AGUÁ (V):"))
+    print (" ====================================== ")
+    if i == 'X' and 'x':
+        i = h / v
+    elif h == 'X' and 'x':
+        h = i * v
+    elif v == 'X' and 'x':
+        v = h * i
+    else:
+        limpar()
+        print ("VALOR INCORRETO, SAINDO DO SISTEMA...")
+        sys.exit()
+    limpar()
+    print (" =============================================== ")
+    print ("  RESULTADO DO CÁLCULO DA INCLINAÇÃO DO TELHADO  ")
+    print (" I =")
+    print (" H =")
+    print (" V =" )
+    print ("  ")
+    print ("  ")
+    print ("  ")
+    print ("  ")
+    print ("  ")
+
+def calc_emergencia():
+    # Em andamento
+def calc_norte():
+    # Em andamento
+def calc_indice():
+    # Em andamento
+def calc_lampadas():
+    # Em andamento
+def calc_lux():
+    # Em andamento
 
 user_choise = menu()
+
 while True:
     menu()
     match user_choise:
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
+        case '1': #INCLINAÇÂO DO TELHADO                         
+        case '2': #DIMENSIONAMENTO DE SAÍDAS DE EMERGÊNCIA       
+        case '3': #TRANSFORMAÇÃO DO NORTE MAGNÉTICO EM GEOGRÁFICO
+        case '4': #ÍNDICE DE RECINTO                             
+        case '5': #QUANTIDADE DE LÂMPADAS                        
+        case '6': #ILUMINÂNCIA REAL EM LUX                       
+        case '0': sys.exit()
