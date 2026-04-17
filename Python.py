@@ -1,10 +1,10 @@
 import os, sys
 
-def limpar():
+def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def menu():
-    limpar()
+    clear()
     print (" =============================================================== ")
     print ("  _____ _____ _____ _____ _ _____ _____ _____ _____ _____ _____  ")
     print (" |  _  | __  |     |  |  |_|_   _|   __|_   _|  |  | __  |  _  | ")
@@ -29,59 +29,90 @@ def menu():
     print (" =============================================================== ")
     return option
 
-def calc_telhado(): # Em andamento
-    limpar()
-    print (" ======================================= ")
-    print ("    FÓRMULA DA INCLINAÇÃO DO TELHADO     ")
-    print ("                     H                   ")
-    print ("                I = ---                  ")
-    print ("                     V                   ")
-    i = float(input("ADICIONE O VALOR DA INCLINAÇÃO(I):"))
-    h = float(input("ADIOCIONE O VALOR DA ALTURA DO TELHADO(H):"))
-    v = float(input("ADICIONE O VALOR DO VÃO DA AGUÁ (V):"))
-    print (" ====================================== ")
-    if i == 'X' and 'x':
-        i = h / v
-    elif h == 'X' and 'x':
-        h = i * v
-    elif v == 'X' and 'x':
-        v = h * i
-    else:
-        limpar()
-        print ("VALOR INCORRETO, SAINDO DO SISTEMA...")
-        sys.exit()
-    limpar()
-    print (" =============================================== ")
-    print ("  RESULTADO DO CÁLCULO DA INCLINAÇÃO DO TELHADO  ")
-    print (" I =")
-    print (" H =")
-    print (" V =" )
-    print ("  ")
-    print ("  ")
-    print ("  ")
-    print ("  ")
-    print ("  ")
+def calc_telhado():
+    while True: # Em andamento
+        clear()
+        print (" ======================================= ")
+        print ("    FÓRMULA DA INCLINAÇÃO DO TELHADO     ")
+        print ("                     H                   ")
+        print ("                I = ---                  ")
+        print ("                     V                   ")
+        i = str(input("ADICIONE O VALOR DA INCLINAÇÃO(I):"))
+        h = str(input("ADIOCIONE O VALOR DA ALTURA DO TELHADO(H):"))
+        v = str(input("ADICIONE O VALOR DO VÃO DA AGUÁ (V):"))
+        print (" ====================================== ")
+        if i.upper() == 'X':
+            h = float(h)
+            v = float(v)
+            i = h / v
+        elif h.upper() == 'X':
+            i = float(i)
+            v = float(v)
+            h = i * v
+        elif v.upper() == 'X':
+            h = float(h)
+            i = float(i)
+            v = h * i
+        else:
+            clear()
+            print ("VALOR INCORRETO, SAINDO DO SISTEMA...")
+            sys.exit()
+        clear()
+        print (" =============================================== ")
+        print ("  RESULTADO DO CÁLCULO DA INCLINAÇÃO DO TELHADO  ")
+        print ("                                                 ")
+        print (f"                I = {i:.2f}                      ")
+        print (f"                H = {h:.2f}                      ")
+        print (f"                V = {v:.2f}                      ")
+        print ("                                                 ")
+        print ("   [1] CALCULAR OUTRO VALOR [2] MENU PRINCIPAL   ")
+        print ("               [0] SAIR DO SISTEMA               ")
+        print (" =============================================== ")
+        option = str(input(" R:"))
+        if option == '1':
+            continue
+        elif option == '2':
+            return
+        elif option == '0':
+            sys.exit(0)
+        else:
+            clear()
+            input("OPÇÃO INVÁLIDA, CLIQUE 'ENTER' PARA RETORNAR AO MENU")
+            continue
 
 def calc_emergencia():
-    # Em andamento
-def calc_norte():
-    # Em andamento
+    clear()
+    print ("EM ANDAMENTO, SAINDO DO SISTEMA") # Em andamento
+def calc_norte(): 
+    clear()
+    print ("EM ANDAMENTO, SAINDO DO SISTEMA") # Em andamento
 def calc_indice():
-    # Em andamento
+    clear()
+    print ("EM ANDAMENTO, SAINDO DO SISTEMA") # Em andamento
 def calc_lampadas():
-    # Em andamento
+    clear()
+    print ("EM ANDAMENTO, SAINDO DO SISTEMA") # Em andamento
 def calc_lux():
-    # Em andamento
-
-user_choise = menu()
+    clear()
+    print ("EM ANDAMENTO, SAINDO DO SISTEMA") # Em andamento
 
 while True:
-    menu()
+
+    user_choise = menu()
+    
     match user_choise:
+
         case '1': #INCLINAÇÂO DO TELHADO                         
+            calc_telhado()
         case '2': #DIMENSIONAMENTO DE SAÍDAS DE EMERGÊNCIA       
+            pass # Em andamento
         case '3': #TRANSFORMAÇÃO DO NORTE MAGNÉTICO EM GEOGRÁFICO
+            pass # Em andamento
         case '4': #ÍNDICE DE RECINTO                             
+            pass # Em andamento
         case '5': #QUANTIDADE DE LÂMPADAS                        
+            pass # Em andamento
         case '6': #ILUMINÂNCIA REAL EM LUX                       
-        case '0': sys.exit()
+            pass # Em andamento
+        case '0': 
+            sys.exit()
