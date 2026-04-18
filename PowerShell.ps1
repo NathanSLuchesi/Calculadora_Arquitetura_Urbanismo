@@ -1,9 +1,4 @@
-# Estou criando uma calculadora 100% com PowerShell, estava com vontade de ajudar uma amiga minha e aprimorar a minha lógica de programação
-# Como eu ainda não sou muito familiarizado com a ideia de interface, vou fazer com que o usuário utilize os números para se locomover pela calculadora
-# Comecei a calculadora no dia 2/04 (2 de abril) e pretendo acabar com a calculadora até terça feira
-# A calculadora vai conter algumas fórmulas do curso da minha amiga (Arquitetura e Urbanismo), que são elas: Inclinação do Telhado, Dimensionamento de saída de emergência, Transformação do norte magnético em geográfico, índice de recinto, Quantidade de Lampadas e Iluminância Real em Lux
-# Não sei se vai ser futuramente adicionado mais fórmulas na calculadora porém ela só me pediu essas.
-function InterfacePrincipal { #Interface bem bonitinha
+Function InterfacePrincipal { #Interface bem bonitinha
     Clear-Host
     Write-Host " ================================================================= "
     Write-Host "|  _____ _____ _____ _____ _ _____ _____ _____ _____ _____ _____  |"
