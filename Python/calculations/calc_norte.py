@@ -26,19 +26,20 @@ def formula_norte_magnetico(): # Calcúlo da inclinação do telhado
         elif d.upper() == 'X': # Caso não tenha o valor de d
             azm = float(azm)
             azv = float(azv)
-            d = azm - azv
+            d = azv - azm
         else: # Caso coloque algum tipo de valor que não corresponde para a fórmula
             clear()
-            print ("VALOR INCORRETO, DEIXE SOMENTE OU PELOMENOS 1 VALOR COMO X SAINDO DO SISTEMA...")
-            sys.exit() # Sai do sistema / colocar continue para voltar ao menu??
+            print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+            input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+            continue
         clear()
         print (" =============================================== ")
-        print ("    RESULTADO DO DIMENSIONAMENTO DE SAÍDA DE     ") # Vai mostrar os valores com du
-        print ("                   EMERGÊNCIA                    ") # Vai mostrar os valores com du
+        print ("       RESULTADO DA TRANSFORMAÇÃO DO NORTE       ") # Vai mostrar os valores com du
+        print ("             MAGNÉTICO EM GEOGRÁFICO             ") # Vai mostrar os valores com du
         print ("                                                 ") #-as casas decimais.
-        print (f"              Azv = {azv:.2f}                      ") 
-        print (f"              Azm = {azm:.2f}                      ")
-        print (f"                D = {d:.2f}                      ")
+        print (f"              Azv = {azv:.2f}                   ") 
+        print (f"              Azm = {azm:.2f}                   ")
+        print (f"                D = {d:.2f}                     ")
         print ("                                                 ")
         print ("   [1] CALCULAR OUTRO VALOR [2] MENU PRINCIPAL   ")
         print ("               [0] SAIR DO SISTEMA               ")

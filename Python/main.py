@@ -52,3 +52,6 @@ while True:
     
         case '6':
             print("Em andamento")
+        
+        case '0':
+            sys.exit()
