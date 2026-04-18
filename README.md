@@ -1,7 +1,9 @@
 # Calculadora_Arquitetura_Urbanismo
 
-Estou criando uma calculadora que vai funcionar com interface in-line(Usuário digita a opção e realiza a função.), estava com vontade de ajudar uma amiga minha e aprimorar a minha lógica de programação
-Como eu ainda não sou muito familiarizado com a ideia de interface, vou fazer com que o usuário utilize os números para se locomover pela calculadora
+Estou criando uma calculadora que vai funcionar com interface in-line(Usuário digita a opção e realiza a função.), estava com vontade de ajudar uma amiga minha e aprimorar a minha lógica de programação.
+
+Como eu ainda não sou muito familiarizado com a ideia de interface, vou fazer com que o usuário utilize os números para se locomover pela calculadora.
+
 A calculadora vai conter algumas fórmulas do curso da minha amiga (Arquitetura e Urbanismo), que são elas: Inclinação do Telhado, Dimensionamento de saída de emergência, Transformação do norte magnético em geográfico,índice de recinto, Quantidade de Lampadas e Iluminância Real em Lux, não sei se futuramente eu vou adicionar mais fórmulas ou se eu mesmo vou fazer uma interface para o projeto.
 
 Linguagens UTILIZADAS:
