@@ -14,20 +14,38 @@ def formula_telhado(): # Calcúlo da inclinação do telhado
         v = input("ADICIONE O VALOR DO VÃO DA AGUÁ (V):")
         print (" ====================================== ")
         if i.upper() == 'X': # Caso não tenha o valor de i
-            h = float(h)
-            v = float(v)
-            i = h / v
+            try:
+                h = float(h)
+                v = float(v)
+                i = h / v
+            except:
+                clear()
+                print("VALOR INCORRETO, FALHA NO CÁLCULO.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE")
+                continue
         elif h.upper() == 'X': # Caso não tenha o valor de h
-            i = float(i)
-            v = float(v)
-            h = i * v
+            try:
+                i = float(i)
+                v = float(v)
+                h = i * v
+            except:
+                clear()
+                print("VALOR INCORRETO, FALHA NO CÁLCULO.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue
         elif v.upper() == 'X': # Caso não tenha o valor de v
-            h = float(h)
-            i = float(i)
-            v = h * i
+            try:
+                h = float(h)
+                i = float(i)
+                v = h * i
+            except:
+                clear()
+                print("VALOR INCORRETO, FALHA NO CÁLCULO.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue
         else: # Caso coloque algum tipo de valor que não corresponde para a fórmula
             clear()
-            print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+            print("VALOR INCORRETO, FALHA NO CÁLCULO.")
             input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
             continue 
         clear()
