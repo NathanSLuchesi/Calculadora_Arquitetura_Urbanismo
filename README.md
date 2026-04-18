@@ -16,10 +16,12 @@ Funcionalidades:
 To-do list
 
 Correção:
+
  calc_telhado.py — adicionar try/except dentro de cada bloco if/elif
  calc_emergencia.py — adicionar try/except dentro de cada bloco if/elif
  calc_norte.py — adicionar try/except dentro de cada bloco if/elif
 
 Implementação:
+
  calc_lampadas.py — implementar a fórmula
  calc_lux.py — implementar a fórmula
