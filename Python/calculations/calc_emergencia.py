@@ -18,17 +18,35 @@ def formula_emergencia(): # Calcúlo da inclinação do telhado
         p = input("ADICIONE A QUANTIDADE DE POPULAÇÃO(P):")
         c = input("ADICIONE A CAPACIDADE DA UNIDADE DE PASSAGEM(c):")
         if n.upper() == 'X': # Caso não tenha o valor de n
-            p = float(p)
-            c = float(c)
-            n = p / c
+            try:
+                p = float(p)
+                c = float(c)
+                n = p / c
+            except :
+                clear()
+                print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue
         elif p.upper() == 'X': # Caso não tenha o valor de p
-            n = float(n)
-            c = float(c)
-            p = n * c
+            try:
+                n = float(n)
+                c = float(c)
+                p = n * c
+            except:
+                clear()
+                print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue
         elif c.upper() == 'X': # Caso não tenha o valor de c
-            p = float(p)
-            n = float(n)
-            c = p * n
+            try:
+                p = float(p)
+                n = float(n)
+                c = p * n
+            except:
+                clear()
+                print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue
         else: # Caso coloque algum tipo de valor que não corresponde para a fórmula
             clear()
             print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")

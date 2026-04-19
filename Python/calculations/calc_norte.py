@@ -16,17 +16,35 @@ def formula_norte_magnetico(): # Calcúlo da inclinação do telhado
         azm = input("ADICIONE O VALOR DO AZIMUTE MAGNÉTICO(Azm):")
         d = input("ADICIONE O VALOR DA DECLINAÇÃO(D):")
         if azv.upper() == 'X': # Caso não tenha o valor de azv
-            azm = float(azm)
-            d = float(d)
-            azv = azm + d
+            try:
+                azm = float(azm)
+                d = float(d)
+                azv = azm + d
+            except:
+                clear()
+                print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue    
         elif azm.upper() == 'X': # Caso não tenha o valor de azm
-            azv = float(azv)
-            d = float(d)
-            azm = azv - d
+            try:
+                azv = float(azv)
+                d = float(d)
+                azm = azv - d
+            except:
+                clear()
+                print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+            continue
         elif d.upper() == 'X': # Caso não tenha o valor de d
-            azm = float(azm)
-            azv = float(azv)
-            d = azv - azm
+            try:
+                azm = float(azm)
+                azv = float(azv)
+                d = azv - azm
+            except:
+                clear()
+                print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
+                input("PRESSIONE ENTER PARA TENTAR NOVAMENTE.")
+                continue
         else: # Caso coloque algum tipo de valor que não corresponde para a fórmula
             clear()
             print("VALOR INCORRETO, PREENCHA TODOS OS NÚMEROS DA FÓRMULA PARA FUNCIONAR CORRETAMENTE.")
