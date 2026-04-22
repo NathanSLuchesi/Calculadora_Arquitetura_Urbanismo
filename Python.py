@@ -37,9 +37,9 @@ def calc_telhado():
         print ("                     H                   ")
         print ("                I = ---                  ")
         print ("                     V                   ")
-        i = str(input("ADICIONE O VALOR DA INCLINAÇÃO(I):"))
-        h = str(input("ADIOCIONE O VALOR DA ALTURA DO TELHADO(H):"))
-        v = str(input("ADICIONE O VALOR DO VÃO DA AGUÁ (V):"))
+        i = input("ADICIONE O VALOR DA INCLINAÇÃO(I):")
+        h = input("ADICIONE O VALOR DA ALTURA DO TELHADO(H):")
+        v = input("ADICIONE O VALOR DO VÃO DA AGUÁ (V):")
         print (" ====================================== ")
         if i.upper() == 'X':
             h = float(h)
